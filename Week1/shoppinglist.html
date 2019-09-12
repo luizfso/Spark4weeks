@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spark 4-Weeks - Week 1 - Simply About Me HTML</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        h2 {
+
+            font-family: "Gentium Book Basic", Georgia, serif;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #F1C863;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .navbar {
+            background-color: #f8f8f8;
+            position: relative;
+            min-height: 50px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #3b31d1 !important;
+        }
+
+        .navbar-nav>li {
+            padding-left: 23px;
+            display: inline-block;
+        }
+
+        body {
+            color: #222222;
+            font-size: 1em;
+            font-family: "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
+        .introduction-section,
+        .location-section,
+        .questions-section {
+            max-width: 38em;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2em;
+        }
+
+        .introduction-section>p,
+        .location-section>p,
+        .questions-section,
+        .content-footer>p,
+        .introduction>p,
+        .location>p {
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        .questions-section>h2 {
+            font-family: "Gentium Book Basic", Georgia, serif;
+            font-size: 1.2em;
+            font-weight: bold;
+
+            margin: 2em 0 1em 0;
+        }
+
+        section>h1 {
+            margin-top: 2em;
+        }
+
+        .content-footer,
+        .mastheader-heading,
+        .mastheader-intro {
+            text-align: center;
+        }
+
+        .mastheader {
+            /* padding: 6em 0; */
+            /* background-image: url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1671&q=80'); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top: solid 1em #FFCF33;
+        }
+
+        .mastheader-intro {
+            margin-bottom: 0.1em;
+            font-family: "Gentium Book Basic", Georgia, serif;
+            font-size: 2em;
+        }
+
+        .mastheader-heading {
+            margin-top: -0.2em;
+            font-weight: bold;
+            font-size: 6em;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        .content-footer {
+            margin: 50px 0;
+            padding: 20px 0;
+            text-align: center;
+            background-color: #73A8C2;
+            text-decoration: none;
+        }
+
+        .content-footer>p {
+            color: #F7EDE1;
+        }
+
+        .social>li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            .mastheader {
+                padding: 3em 0;
+            }
+
+            .mastheader-heading {
+                font-size: 3em;
+            }
+
+            .content-footer {
+                padding: 2em 2.5em;
+            }
+
+        }
+
+        .img-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            /* height: 100%; */
+            width: auto;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .img-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(88, 139, 248);
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        .img-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay span {
+            /* position: relative; */
+            display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class='mastheader'>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1671&q=80"
+                class="img-fluid" alt="Responsive image">
+            <div class="overlay">
+                <p class='mastheader-intro'>Hi I'm</p>
+                <h3 class='mastheader-heading'>Luiz!</h3>
+
+                <span>And this is my Shopping List</span>
+                <span>&#9869</span>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+                aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample09">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">First Class - "Home" <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="likes.html">Likes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="shoppinglist.html" tabindex="-1"
+                            aria-disabled="true">Shopping list</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Coming Soon</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown09">
+                            <a class="dropdown-item" href="#">Next class</a>
+                            <a class="dropdown-item" href="#">Another class</a>
+                            <a class="dropdown-item" href="#">After the Next class</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <form class="form-inline my-2 my-md-0">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </form> -->
+            </div>
+        </nav>
+
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Centered nav only <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown10">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav> -->
+
+        <main role="main">
+            <div class="jumbotron">
+                <div class="col-sm-8 mx-auto">
+                    <h3>This is my form using some class of bootstrap style <code>.bootstrap.min.css</code> called via
+                        <a href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">link</a></h3>
+                    <p>My form is using a <a href="https://getbootstrap.com/">bootstrap</a> "lib" for enhancement this
+                        beautiful code</p>
+
+                    <h3>Form with the inputs to go to amazon.com</h3>
+                    <form method="GET" action="https://www.amazon.com/s">
+                        Element K<br>
+                        <input type="text" class="form-control" name="k" id="elementk" aria-describedby="elementkHelp"
+                            placeholder="Enter your criteria to search">
+                        <br />
+                        <!-- Input type submit<br>
+                <input type="submit" value="Search on Amazon"> -->
+                        Button type submit<br>
+                        <button type="submit" class="btn btn-success">Search on Amazon</button>
+                    </form>
+
+                    <br />
+                    <small>For use bootstrap css lib vist:</small>
+                    <p>
+                        <a class="btn btn-primary" href="https://getbootstrap.com/docs/4.3/getting-started/download/"
+                            role="button">View Bootstrap docs &raquo;</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="content-footer">
+        <p>Say hi to me on these social networks:</p>
+        <ul class="social">
+            <li><a class="css-is-deranged" href="https://github.com/luizfso">GitHub</a></li>
+            <li><a class="css-is-deranged" href="https://www.instagram.com/luizfsantiago/">Instagram</a></li>
+            <li><a class="css-is-deranged" href="https://www.linkedin.com/in/luizfso/">LinkedIn</a></li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
