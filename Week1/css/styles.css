@@ -17,6 +17,13 @@ ul > li {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+div.column {
+    width: 50%;
+    float: left;
+}
+
+/* Previous CSS from the other pages - Below  */
+
 body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
