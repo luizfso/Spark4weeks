@@ -16,6 +16,9 @@ Get the element with the id, "modifyMe".
 Change its html content from Modify me! to 
 a fun animal fact of your choice. */
 
+let myFavAnimal = document.getElementById("modifyMe");
+myFavAnimal.innerHTML = "tiger";
+
 /*Example 
 Get an array of elements by getting them 
 with their tag name. 
@@ -25,11 +28,11 @@ they all have a different text color.
 
 let listItems = document.getElementsByTagName("li");
 
-for (let i = 0; i<listItems.length; i++){
-    let item = listItems[i];
-    console.log(item);
-    item.setAttribute("class", "greyText");
-}
+// for (let i = 0; i<listItems.length; i++){
+//     let item = listItems[i];
+//     console.log(item);
+//     item.setAttribute("class", "greyText");
+// }
 
 /*Explanation
 listItems is an array that holds all of the 
@@ -49,6 +52,13 @@ Then uncomment the loop.
 Now edit the loop set the class attribute to have
 "boldText" as its value.
 This will apply CSS rules making the font larger. */
+
+for (let i = 0; i<listItems.length; i++){
+    let item = listItems[i];
+    console.log(item);
+    item.setAttribute("class", "boldText");
+}
+
 
 /*Example
 Now we'll create a few nested elements, setting 
@@ -72,6 +82,13 @@ Create a paragraph element.
 Set its text to say another fun animal fact. 
 Add it to the div referenced by the col variable. */
 
+let p2 = document.createElement("p");//create a paragraph element
+p2.innerHTML = "Tiger is not the Tiger Woods";//Set its text 
+col.appendChild(p2);//put it inside the div that makes it wide enough
+
+document.body.appendChild(row);//add this row to the body 
+
+
 /*Your turn 
 Below we get the list of activities and the final li element
 that says Remove Me!. 
@@ -79,8 +96,11 @@ Call removeChild(...) on activityList giving it as
 an argument the variable removeMe. 
 This should remove 4.Remove Me! from the html page. 
 */ 
+
 let activityList = document.getElementById("activityList");
 let removeMe = document.getElementById("removeMe");
+
+activityList.removeChild(removeMe);
 
 //Hint: for the phrases call on and pass as an argument
 //Read the first explanation again. 
