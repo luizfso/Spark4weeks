@@ -1,6 +1,6 @@
 /*Example 
 Get an element by its id and change the innerHTML*/
-let activitiesListHeader = document.getElementById("activityListHeader");
+let activitiesListHeader = document.getElementById("modifyMe");
 activitiesListHeader.innerHTML = "Lab Activities";
 
 /*Explanation
