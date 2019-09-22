@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions Revisited</title>
+    <!--You do not need to edit this file.-->
+    <link rel="stylesheet" href="styles/style.css">
+    <script>
+
+        let x = prompt("Enter a number to test as a prime number:");
+        // let result = isPrime(x, 2);
+
+        // if (result)
+        //     alert(x, " is prime!");
+        // else
+        //     alert(x, " is not prime");
+
+        // function isPrime(number, divisor) {
+        //     if (number == 1)
+        //         return false;
+        //     if (number == 2)
+        //         return true;
+
+        //     // replace me with your code!
+        // }
+
+        function isPrime(num) {
+            for (var i = 2; i < num; i++)
+                if (num % i === 0) {
+                    console.log("Is not a Prime!");
+                    return false;
+                } 
+                console.log("Is Prime");
+            return num > 1;
+        }
+
+        isPrime(x);
+
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+            <h1>Is Prime ?</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Right click and select inspect.</p>
+            <br />
+            <p>The html is not the focus of this Lab.</p>
+        </div>
+    </div>
+</body>
+
+</html>

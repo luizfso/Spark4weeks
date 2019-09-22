@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions Revisited</title>
+    <!--You do not need to edit this file.-->
+    <link rel="stylesheet" href="styles/style.css">
+    <script>
+
+        let x = prompt("Enter a first number to add:");
+        let y = prompt("Enter a first number to add:");
+
+        function peanoAddition(x, y) {
+            console.log(y);
+            if ( x > y) {
+                peanoAddition( x, ++y );
+            }
+
+        }
+
+        peanoAddition(x, y);
+
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+            <h1>Peano Addtion</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Right click and select inspect.</p>
+            <br />
+            <p>The html is not the focus of this Lab.</p>
+            <p>For this work in a good example please use x = 20 and y = 0</p>
+        </div>
+    </div>
+</body>
+
+</html>
