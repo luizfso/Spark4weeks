@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Hangman! The Best Game Ever!</title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="jumbotron-narrow.css" rel="stylesheet"> -->
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li id="home" role="presentation" class="active"><a href="index.html">Home</a></li>
+          <li id="game" role="presentation" class=""><a href="twoplayers.html">Two Players</a></li>
+          <li id="contact" role="presentation" class=""><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      <h3><i class="hangmanIcon"></i>The Hangman Game</h3>
+    </div>
+
+    <div id="block1" class="jumbotron">
+      <div class="" id="welcome">
+        <h1>Hangman<i class="hangman"></i></h1>
+        <br />
+        <p class="lead">Are you ready for this game? So prepare your brain and let's go!</p>
+        <div class="col-md-6 col-lg-6">
+          <p><a class="btn btn-lg btn-success" id="start" role="button">Single Player</a></p>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <p><a class="btn btn-lg btn-success" id="start" role="button">Two Players</a></p>
+        </div>
+        <p> Choose the Game mode! </p>
+      </div>
+      <div class="hidden" id="playagain">
+        <button type="button" class="btn btn-primary btn-lg" id="reset">Play again</button>
+      </div>
+    </div>
+
+    <div id="block2" class="row marketing hidden">
+      <div class="col-md-6 col-lg-6">
+        <h4>The Chosen Category Is:</h4>
+        <p id="catagoryName"></p>
+      </div>
+
+      <div class="col-md-6 col-lg-6">
+        <h4>You have one shot!</h4>
+        <p id="clue"></p>
+        <button type="button" class="btn btn-primary btn-lg" id="hint">Hint</button>
+
+      </div>
+    </div>
+
+    <div id="block3" class="jumbotron hidden">
+      <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+      <div id="hold"></div>
+    </div>
+
+    <div id="block4" class="jumbotron hidden">
+      <p>Use this alphabet below to start guess the word</p>
+      <div id="buttons"></div>
+      <p id="mylives"></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2019 MSWebmaker.com, Inc.</p>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Inspiration from <a href="https://codepen.io/cathydutton/" title="Freepik">cathydutton</a> by <a
+        href="https://www.codepen.io/" title="Codepen">www.codepen.io</a></div>
+  </footer>
+
+  </div> <!-- /container -->
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+</body>
+
+<script src="scripts/script.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</html>
